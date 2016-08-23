@@ -1,38 +1,38 @@
-//#![doc(html_logo_url = "")]
-//!# Scary macros for serde_json
-//!![Wat](https://i.imgur.com/IppKJ.jpg)
-//! 
-//!Macros for easily accessing `serde_json` [Value](https://docs.serde.rs/serde_json/value/enum.Value.html)s
-//!in JavaScript like fashion
+//! # Scary macros for serde_json
+//! ![Wat](https://i.imgur.com/IppKJ.jpg)
 //!
-//!```rust
-//!#[macro_use] extern crate serde_wat;
-//!extern crate serde_json;
+//! Macros for easily accessing `serde_json`
+//! [Value](https://docs.serde.rs/serde_json/value/enum.Value.html)s
+//! in JavaScript like fashion
 //!
-//!use serde_json::from_str;
-//!use serde_json::value::Value;
+//! ```rust
+//! #[macro_use] extern crate serde_wat;
+//! extern crate serde_json;
 //!
-//!# fn main() {
-//!let a: Value = from_str(r#"{"b": {"c": 42}}"#).unwrap();
-//!// Access unwrapping
-//!assert_eq!(wat!(a.b.c as i64), 42);
-//!// Safe access
-//!assert_eq!(wat!(a.b as &str?), None);
-//!// Testing
-//!assert_eq!(wat!(a is bool), false);
-//!# }
-//!```
+//! use serde_json::from_str;
+//! use serde_json::value::Value;
 //!
-//!## Examples
+//! # fn main() {
+//! let a: Value = from_str(r#"{"b": {"c": 42}}"#).unwrap();
+//! // Access unwrapping
+//! assert_eq!(wat!(a.b.c as i64), 42);
+//! // Safe access
+//! assert_eq!(wat!(a.b as &str?), None);
+//! // Testing
+//! assert_eq!(wat!(a is bool), false);
+//! # }
+//! ```
 //!
-////!```rust
-////!wat!(a.b.c as i64);
-////!wat!(a as &mut Vec?);
-////!wat!(a as &str);
-////!wat!(a.b is i64);
-////!wat!(a.b is &Map?);
-////!wat!(a is &Map);
-////!wat!(a.0 as bool);
-////!```
+//! ## Examples
+//!
+//! ```rust,ignore
+//! wat!(a.b.c as i64);
+//! wat!(a as &mut Vec?);
+//! wat!(a as &str);
+//! wat!(a.b is i64);
+//! wat!(a.b is &Map?);
+//! wat!(a is &Map);
+//! wat!(a.0 as bool);
+//! ```
 
 include!(concat!(env!("OUT_DIR"), "/macros.rs"));
