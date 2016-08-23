@@ -1,0 +1,14 @@
+[package]
+name = "serde_wat"
+version = "0.1.0"
+authors = ["Maciej Goszczycki <mgoszcz2@gmail.com>"]
+build = "build.rs"
+description = "Scary macros for serde_json"
+documentation = "..."
+repository = "https://github.com/mgoszcz2/serde_wat"
+readme = "README.md"
+keywords = ["serde", "json", "macro"]
+license = "MIT"
+
+[dev-dependencies]
+serde_json = "0.8.1"

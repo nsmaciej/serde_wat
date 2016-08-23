@@ -1,0 +1,10 @@
+#[macro_export]
+macro_rules! wat {
+    ($var:tt.$($x:tt).+) => {{
+        let path = "/".to_string() + &[$(stringify!($x)),*].join("/");
+        $var.pointer(&path).expect(&format!("Key error {}", path))
+    }};
+    ($var:tt.$($x:tt).+?) => {{
+        let path = "/".to_string() + &[$(stringify!($x)),*].join("/");
+        $var.pointer(&path)
+    }};
