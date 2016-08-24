@@ -1,12 +1,20 @@
 # Scary macros for serde_json
 
-[Documentation](http://mgoszcz2.github.io/serde_wat/serde_wat/index.html) | [Crate](https://crates.io/crates/serde_wat)
+<center>[Documentation](http://mgoszcz2.github.io/serde_wat/serde_wat/index.html) | [Crate](https://crates.io/crates/serde_wat)</center>
 
 ![Wat](https://i.imgur.com/IppKJ.jpg)
- 
+
 Macros for easily accessing `serde_json`
 [Value](https://docs.serde.rs/serde_json/value/enum.Value.html)s
 in JavaScript like fashion
+
+```
+# Cargo.toml
+[dependencies]
+serde_wat = "0.1"
+```
+
+## Usage
 
 ```rust
 #[macro_use] extern crate serde_wat;
