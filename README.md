@@ -8,7 +8,7 @@ Macros for easily accessing `serde_json`
 [Value](https://docs.serde.rs/serde_json/value/enum.Value.html)s
 in JavaScript like fashion
 
-```
+```toml
 # Cargo.toml
 [dependencies]
 serde_wat = "0.1"
