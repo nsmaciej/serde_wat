@@ -1,7 +1,8 @@
 # Scary macros for serde_json
-![Wat](https://i.imgur.com/IppKJ.jpg)
 
-[Documentation](http://mgoszcz2.github.io/serde_wat/serde_wat/index.html)
+[Documentation](http://mgoszcz2.github.io/serde_wat/serde_wat/index.html) | [Crate](https://crates.io/crates/serde_wat)
+
+![Wat](https://i.imgur.com/IppKJ.jpg)
  
 Macros for easily accessing `serde_json`
 [Value](https://docs.serde.rs/serde_json/value/enum.Value.html)s
